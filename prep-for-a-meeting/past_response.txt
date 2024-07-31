@@ -1,0 +1,23 @@
+{“agenda”: "Project for a RAG-based Chatbot for Albatha’s IT Portal",
+“summary”: "The meeting was centered around a RAG-based chatbot project developed by Sulaiman. The chatbot is designed to function similarly to ChatGPT but instead of feeding documents to the LLM at query time, the documents are pre-stored on a local server. This approach ensures that sensitive documents are kept secure and not exposed to third-party services. Key Points Discussed: Overview and Demonstration: Sulaiman provided an overview of the chatbot, demonstrating the backend and APIs. He highlighted the importance of storing documents locally to maintain data security and avoid third-party service exposure. Login/Register Features: Sulaiman explained the login and registration features, emphasizing how these would integrate with Albatha’s IT portal. Lakshmi, a participant, asked Sulaiman to explain this integration from a business perspective, stressing the need to tailor presentations to the audience. Technical Framework: Sulaiman described the technical framework used for the project. He mentioned that the project is built using Langchain as the platform and Python as the programming language. He provided an example of how an LLM works, likening it to ChatGPT, and explained how it processes queries to provide answers. Correction and Clarification: Lakshmi corrected Sulaiman on referring to Langchain as a framework, clarifying it should be termed a platform. She also urged Sulaiman to explain technical requirements in layman's terms, as this would help in a meeting with Reinier scheduled for the first week of August. API and Database: The discussion moved to the technical specifics, where Flask was identified as the API provider. Sulaiman explained the use of a vector database for storing document embeddings and how semantic analysis is performed within this database. Authentication and Authorization: The project employs Microsoft’s OAuth 2.0 flow for authentication and authorization, utilizing Graph APIs to fetch access tokens. Handling Context Window Limitations: To address LLM context window limitations, document data is divided into chunks and converted into vector embeddings. User queries are broken down into three similar queries, which are semantically searched in the vector database. The results are combined and ranked using a Reciprocal Rank Fusion function to provide the most relevant context to the LLM. Scalability and Flexibility: The chatbot is designed to be scalable, with the capability to integrate different loaders (e.g., CSV loaders, PDF loaders) to convert various file types into text. For production deployment, it is recommended to use Qdrant or Milvus DB. Query Filters and Pre-Context: Users can apply filters to their queries to retrieve specific content, and a pre-context mechanism helps determine the category of documents to search within. Purpose and Scope The Albatha Policy Chatbot aims to provide an advanced, efficient solution for querying Albatha’s policy documents. By leveraging LLM reasoning and RAG, it ensures swift and precise access to critical information while enhancing user experience. The chatbot prioritizes data security by operating entirely on local systems, avoiding third-party services.",
+"discussion": [
+        {
+            "discussion_point": "The meeting discussed the architecture of the chatbot. The organizer was asked to finish it promptly.",
+            "person_responsible": "Sulaiman Ahmad",
+            "completion_date": "20 July 2024",
+            "remarks": "Lakshmi and the rest of the IT team were very excited to move forwards with the project."
+        },
+        {
+            "discussion_point": "Requests were made to create a demo account for testing purposes",
+            "person_responsible": "Bineesh Babu",
+            "completion_date": "18 July 2024",
+            "remarks": "The project is yet to undergo testing with SLMs"
+        },
+        {
+            "discussion_point": "The project was built using RAG fusion.",
+            "person_responsible": "Sulaiman Ahmad",
+            "completion_date": "19 July 2024",
+            "remarks": "Alternate options to RAG fusion were explored"
+        }
+    ]
+}
